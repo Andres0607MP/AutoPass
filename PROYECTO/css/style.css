@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: #f5f5f5;
+  font-size: 1.4rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-size: 220px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 250px;
+  height: 100px;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2980b9;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero {
+  background-image: url(../img/hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+
+.text {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* o cualquier color con opacidad */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* compatibilidad Safari */
+  border-radius: 10px;
+}
+
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-size: bold;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #2c2929;
+  font-size: bold;
+}
+
+.buscador {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+.grid-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card h3 {
+  margin-bottom: 10px;
+  color: #0e6394;
+}
+.card form label {
+  font-weight: bold;
+}
+.card form input,
+.card form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.btn-registrar {
+  padding: 10px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.barra-ocupacion {
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progreso {
+  height: 100%;
+  background-size: 400% 100%;
+  background-repeat: repeat;
+  animation: GusanoGradient 3s linear infinite;
+}
+
+.barra-ocupacion {
+  animation: scale 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+}
+
+
+/* Verde (inicial) */
+.barra-verde .progreso {
+  background: linear-gradient(to right, #27ae60, #2ecc71, #1a8a48, #2ecc71);
+  background-size: 400% 100%;
+  animation: GusanoGradient 3s linear infinite;
+}
+
+/* Amarilla */
+.barra-amarilla .progreso {
+  background: linear-gradient(to right, #eeff00, #dfb93c, #eeff00, #ffc400);
+  background-size: 400% 100%;
+  animation: GusanoGradient 3s linear infinite;
+}
+
+/* Roja */
+.barra-roja .progreso {
+  background: linear-gradient(to right, #aa1100, #ff2222, #a81100, #ff1900);
+  background-size: 400% 100%;
+  animation: GusanoGradient 3s linear infinite;
+}
+
+.barra-pelig .progreso {
+  background: linear-gradient(to right, #ff1900, #ff7322, #ff1900, #810000);
+  background-size: 400% 100%;
+  animation: GusanoGradient 0.7s linear infinite, borde-peligro 0.7s linear infinite;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.btn-salida {
+  margin-left: 10px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  background: #2c3e50;
+  color: white;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@keyframes GusanoGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+@keyframes borde-peligro {
+  0% {
+    border: 2px solid #000000;
+  }
+  100% {
+    border: 1px solid #d0ff00;
+  }
+}
+
+@keyframes scale {
+  0% {
+    border: 1px solid #00000071;
+    transform: scale(1);
+  }
+  50% {
+    border: 1px solid #00000070;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

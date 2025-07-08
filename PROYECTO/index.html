@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoPass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <div class="logo"></div>
+      <nav>
+        <ul>
+          <i class="fa-solid fa-user"></i>
+          <li><a href="#">Inicio de Sesión</a></li>
+          <span>/</span>
+          <li><a href="#">Registro de usuario</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <!-- Imagen y mensaje central -->
+      <section class="hero">
+        <div class="text">
+        <h2>Registra, controla y cobra. Así de simple.</h2>
+        <p>Mientras tú vigilas la entrada, AutoPass se encarga de la cuenta.</p>
+        </div>
+      </section>
+
+      <!-- Cuatro secciones debajo -->
+      <section class="grid-sections">
+
+        <div class="card registroForms">
+          <h3><i class="fas fa-sign-in-alt"></i> Registrar Ingreso</h3>
+          <form id="registroForm">
+            <label for="placa" id="placa-label">Placa del Vehículo</label>
+            <input type="text" id="placa" required />
+            <label for="tipo">Tipo de Vehículo</label>
+            <select id="tipo">
+              <option value="Carro">Carro</option>
+              <option value="Moto">Moto</option>
+              <option value="Bicicleta">Bicicleta</option>
+            </select>
+            <button type="submit" class="btn-registrar">Registrar</button>
+            <p id="info"></p>
+          </form>
+        </div>
+
+        <div class="card parqueadero">
+          <h3><i class="fas fa-parking"></i> Parqueadero</h3>
+          <ul class="parqueadero-list">
+            <li class="temporal">No hay vehículos en el parqueadero.</li>
+            <input type="text" id="buscador" placeholder="Buscar vehículo..." class="buscador" />
+          </ul>
+        </div>
+
+        <div class="card historial">
+          
+          <h3><i class="fas fa-history"></i> Historial de Vehículos</h3>
+          <ul class="historial-list"></ul>
+            
+          </ul>
+        </div>
+
+        <div class="card panel-monitoreo">
+          <h3><i class="fas fa-eye"></i> Monitoreo</h3>
+          <p><strong class="texto-ocupacion">Ocupación: 0 / 25</strong></p>
+          <div class="barra-ocupacion">
+            <div class="progreso"></div>
+          </div>
+          <h4>Alertas</h4>
+          <ul>
+            <li class="porcen">Capacidad al 0%</li>
+            <li></li>
+            <li>Carro: 1 unidad completa</li>
+            <li>Moto: 0.5 unidad</li>
+            <li>Bicicleta: 0.25 unidad</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2025 AutoPass. Todos los derechos reservados.
+    </footer>
+
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
